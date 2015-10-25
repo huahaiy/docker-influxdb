@@ -1,7 +1,7 @@
 #
 # InfluxDB
 #
-# Version     0.1
+# Version     0.3
 #
 
 FROM huahaiy/debian
@@ -10,9 +10,9 @@ MAINTAINER Huahai Yang <hyang@juji-inc.com>
 
 RUN \
   echo "===> install InfluxDB..."  && \
-  wget https://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb && \
-  dpkg -i influxdb_latest_amd64.deb && \
-  rm influxdb_latest_amd64.deb && \
+  wget https://s3.amazonaws.com/influxdb/influxdb_0.9.4.2_amd64.deb && \
+  dpkg -i influxdb_0.9.4.2_amd64.deb && \
+  rm influxdb*.deb && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
